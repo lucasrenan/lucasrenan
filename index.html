@@ -21,9 +21,6 @@
   </script>
 </head>
 <body class="font-sans">
-  <!-- Fixed rail mirroring <main>'s padding + max-width, so the button
-       aligns with the content's right edge (the portrait) instead of the
-       viewport corner. pointer-events pass through everywhere but the button. -->
   <div class="pointer-events-none fixed inset-x-0 top-[clamp(20px,4vw,40px)] z-10 px-[clamp(22px,7vw,80px)]">
     <div class="w-full max-w-[820px] mx-auto flex justify-end">
       <button
@@ -65,7 +62,7 @@
 
           <!-- Portrait -->
           <div class="order-2 min-w-0 md:col-start-2 md:row-start-1 md:row-span-2 md:self-stretch">
-            <img src="/lucas.jpg" alt="Portrait of Lucas Renan"
+            <img src="/lucas.jpg" alt="Lucas playing Ramones"
                  width="1400" height="2494"
                  fetchpriority="high" decoding="async"
                  class="block w-full aspect-[9/16] md:h-full md:aspect-auto md:min-h-[420px] object-cover object-center rounded-2xl">
