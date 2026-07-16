@@ -32,13 +32,16 @@ export function applyTheme() {
 
 function setupToggle() {
   const btn = document.getElementById('theme-toggle');
-  const label = document.getElementById('theme-label');
-  if (!btn || !label) return;
+  if (!btn) return;
+  const icons = btn.querySelectorAll('[data-theme-icon]');
 
   function render() {
-    const t = storedOverride();
-    label.textContent = t === 'light' ? 'Light' : t === 'dark' ? 'Dark' : 'Auto';
-    btn.title = 'Theme: ' + (t || 'system') + ' — click to change';
+    const t = storedOverride() || 'auto';
+    icons.forEach((icon) => {
+      icon.classList.toggle('hidden', icon.dataset.themeIcon !== t);
+    });
+    btn.title = 'Theme: ' + (t === 'auto' ? 'system' : t) + ' — click to change';
+    btn.setAttribute('aria-label', 'Theme: ' + t + '. Change theme');
   }
 
   btn.addEventListener('click', () => {
