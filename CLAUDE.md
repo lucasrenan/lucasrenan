@@ -5,7 +5,7 @@
 - Node 22 via nvm
 
 ## Commands
-Prefix with `source ~/.nvm/nvm.sh && nvm use 22 &&` (local uses Node 22; CI uses Node 20).
+Prefix with `source ~/.nvm/nvm.sh && nvm use 22 &&` (both local and CI use Node 22).
 - Dev server: `npm run dev`
 - Build: `npm run build` (outputs to `dist/`)
 - Preview production build: `npm run preview` (serves `dist/`)
