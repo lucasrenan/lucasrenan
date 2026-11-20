@@ -1,6 +1,8 @@
 import { defineConfig } from 'vite';
+import tailwindcss from '@tailwindcss/vite';
 
 export default defineConfig({
+  plugins: [tailwindcss()],
   // This site is served from the root of the custom domain lucasrenan.com
   // (see public/CNAME), so the base path is '/'.
   //

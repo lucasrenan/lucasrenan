@@ -1,11 +1,12 @@
 # Project: lucasrenan.com
 
 ## Stack
-- Vite + Tailwind CSS, vanilla JS
-- Node 22 via nvm
+- Vite 8 + Tailwind CSS 4 (via `@tailwindcss/vite`, CSS-first config in `src/style.css`), vanilla JS
+- Node 26 LTS, pinned in `.nvmrc` (read by mise/nvm/fnm locally and by CI's `setup-node`)
 
 ## Commands
-Prefix with `source ~/.nvm/nvm.sh && nvm use 22 &&` (both local and CI use Node 22).
+Locally Node is managed by mise, which picks up `.nvmrc`; in non-interactive shells prefix with
+`mise exec --` to get the pinned version.
 - Dev server: `npm run dev`
 - Build: `npm run build` (outputs to `dist/`)
 - Preview production build: `npm run preview` (serves `dist/`)

@@ -1,6 +1,19 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
+
+/* Class-based dark mode: theme.js toggles the `dark` class on <html>. */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* Colors are driven by the CSS custom properties below; `.dark` swaps their values. */
+@theme {
+  --color-bg: var(--bg);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-hair: var(--hair);
+  --color-card: var(--card);
+  --color-accent: var(--accent);
+
+  --font-sans: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
 
 @layer base {
   :root {
